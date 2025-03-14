@@ -5,9 +5,9 @@ import pluginJs from "@eslint/js"
 import pluginReactConfig from "eslint-plugin-react/configs/recommended.js"
 import tseslint from "typescript-eslint"
 
-const flatCompat = new FlatCompat();
+const flatCompat = new FlatCompat()
 
-export default [
+const config = [
   { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
@@ -74,3 +74,5 @@ export default [
     },
   },
 ]
+
+export default config
